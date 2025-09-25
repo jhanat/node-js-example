@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Node.js Server</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Simple Node.js Server</h1>
+            <p>A basic Express.js server for testing purposes</p>
+        </header>
+
+        <main>
+            <section class="api-info">
+                <h2>API Endpoints</h2>
+                <div class="endpoint-list">
+                    <div class="endpoint">
+                        <span class="method get">GET</span>
+                        <span class="url">/</span>
+                        <span class="description">Welcome message with API info</span>
+                    </div>
+                    <div class="endpoint">
+                        <span class="method get">GET</span>
+                        <span class="url">/health</span>
+                        <span class="description">Server health check</span>
+                    </div>
+                    <div class="endpoint">
+                        <span class="method get">GET</span>
+                        <span class="url">/api/health</span>
+                        <span class="description">API health check</span>
+                    </div>
+                    <div class="endpoint">
+                        <span class="method get">GET</span>
+                        <span class="url">/api/users</span>
+                        <span class="description">Get all users</span>
+                    </div>
+                    <div class="endpoint">
+                        <span class="method get">GET</span>
+                        <span class="url">/api/users/:id</span>
+                        <span class="description">Get user by ID</span>
+                    </div>
+                    <div class="endpoint">
+                        <span class="method post">POST</span>
+                        <span class="url">/api/users</span>
+                        <span class="description">Create new user</span>
+                    </div>
+                    <div class="endpoint">
+                        <span class="method put">PUT</span>
+                        <span class="url">/api/users/:id</span>
+                        <span class="description">Update user by ID</span>
+                    </div>
+                    <div class="endpoint">
+                        <span class="method delete">DELETE</span>
+                        <span class="url">/api/users/:id</span>
+                        <span class="description">Delete user by ID</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="test-section">
+                <h2>Test API</h2>
+                <div class="test-buttons">
+                    <button onclick="testEndpoint('/', 'GET')">Test Root</button>
+                    <button onclick="testEndpoint('/health', 'GET')">Test Health</button>
+                    <button onclick="testEndpoint('/api/users', 'GET')">Get Users</button>
+                    <button onclick="testEndpoint('/api/users/1', 'GET')">Get User 1</button>
+                </div>
+                <div id="result" class="result-area"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Node.js Express Server - Ready for testing!</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
